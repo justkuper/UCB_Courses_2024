@@ -1,0 +1,116 @@
+:root {
+    --primary: rgb(90, 88, 88);
+    --font: rgb(255, 0, 179);
+    --tertiary: green;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    padding: 1%;
+    /* use CSS var() function to reference a variable created above */
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+main {
+    display: flex;
+    flex: 1 1 0;
+    max-width: 96%;
+    margin: 2% auto;
+}
+
+.box {
+    border: transparent 1px dashed;
+    margin: 10px auto;
+    width: 85%;
+    border-radius: 10px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.products {
+    flex: 1;
+    background-color: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%);
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    border: solid black 1px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    padding: 10px;
+    flex: 0 0 300px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin: 20px;
+    color: var(--font);
+    background-color: var(--primary);
+}
+
+.card > header {
+    color: var(--font);
+    border-radius: 50px 50px 0px 0px;
+    padding: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.linear-gradient-background {
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%);
+}
+
+.code-card .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-header {
+    position: relative;
+    margin-top: -20px;
+}
+
+
+footer {
+    display: flex;
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 1%;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    main {
+      max-width: 1200px;
+    }
+}
